@@ -1,0 +1,13 @@
+{
+  "name": "ga2-7eb5d2",
+  "image": "ghcr.io/devcontainers/features/python:1",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {}
+  },
+  "postCreateCommand": "pip install --upgrade pip && pip install fastapi uvicorn",
+  "extensions": [
+    "astral-sh.uv",
+    "ms-python.python"
+  ]
+}
+
