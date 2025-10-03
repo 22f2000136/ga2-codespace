@@ -1,13 +1,16 @@
 {
   "name": "ga2-7eb5d2",
-  "image": "ghcr.io/devcontainers/features/python:1",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
-    "ghcr.io/devcontainers/features/python:1": {}
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11",
+      "pip": true
+    }
   },
-  "postCreateCommand": "pip install --upgrade pip && pip install fastapi uvicorn",
   "extensions": [
     "astral-sh.uv",
     "ms-python.python"
-  ]
+  ],
+  "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh && uv pip install fastapi",
+  "remoteUser": "vscode"
 }
-
